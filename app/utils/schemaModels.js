@@ -1,8 +1,8 @@
 import mongoose from "mongoose"
 
-const schema = mongoose.Schema
+const Schema = mongoose.Schema
 
-const ItemSchema = new schema({
+const ItemSchema = new Schema({
   title: String,
   image: String,
   price: String,
@@ -10,4 +10,4 @@ const ItemSchema = new schema({
   email: String,
 });
 
-export const ItemModel = mongoose.model.Item || mongoose.model("Item", ItemSchema)
+export const ItemModel = mongoose.models.Item || mongoose.model("Item", ItemSchema)
